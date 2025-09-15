@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import vortexLogo from '/vortex-logo.svg'
 import './App.css'
 
 function App() {
@@ -7,9 +6,6 @@ function App() {
 
   return (
     <>
-      <div>
-        <img src={vortexLogo} className="logo vortex" alt="Wortell Enterprise Security logo" />
-      </div>
       <pre className="ascii-art">
 {`
 ██╗    ██╗ ██████╗ ██████╗ ████████╗███████╗██╗     ██╗     
