@@ -29,10 +29,10 @@
   animation: ansi-background 8s ease infinite;
   padding: 2rem;
   border-radius: 12px;
-  border: 2px solid #00ffff;
+  border: 2px solid #00ff00;
   box-shadow: 
-    0 0 20px #00ffff,
-    inset 0 0 20px rgba(0, 255, 255, 0.1);
+    0 0 20px #00ff00,
+    inset 0 0 20px rgba(0, 255, 0, 0.1);
   margin: 1rem auto;
   max-width: fit-content;
   overflow-x: auto;
@@ -43,14 +43,11 @@
   -webkit-background-clip: text;
   background-image: linear-gradient(
     45deg,
-    #ff00ff 0%,
-    #00ffff 15%,
-    #ffff00 30%,
-    #ff00ff 45%,
-    #00ff00 60%,
-    #ff0080 75%,
-    #0080ff 90%,
-    #ff00ff 100%
+    #8b00ff 0%,
+    #00ff00 25%,
+    #9400d3 50%,
+    #00ff41 75%,
+    #8b00ff 100%
   );
   background-size: 600% 600%;
   animation: ansi-rainbow 3s linear infinite, ansi-glow 2s ease-in-out infinite alternate;
@@ -88,12 +85,12 @@
 /* Fallback for browsers that don't support background-clip: text */
 @supports not (background-clip: text) or not (-webkit-background-clip: text) {
   .ansi-art {
-    color: #00ffff;
+    color: #00ff00;
     background-image: none;
     text-shadow: 
-      0 0 10px #00ffff,
-      0 0 20px #ff00ff,
-      0 0 30px #ffff00;
+      0 0 10px #00ff00,
+      0 0 20px #8b00ff,
+      0 0 30px #00ff41;
   }
 }
 
