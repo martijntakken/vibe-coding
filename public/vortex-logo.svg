@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150" width="400" height="150">
+  <!-- Dark background -->
+  <rect width="400" height="150" fill="#0a0a0a"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00ff41" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="150" fill="url(#grid)"/>
+  
+  <!-- Glow effect -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- ENTERPRISE SECURITY text -->
+  <text x="200" y="25" text-anchor="middle" fill="#00ff41" font-family="monospace" font-size="10" font-weight="bold" opacity="0.8">ENTERPRISE SECURITY</text>
+  
+  <!-- VORTEX main text with cyber styling -->
+  <text x="200" y="90" text-anchor="middle" fill="#00ff41" font-family="monospace, 'Courier New'" font-size="48" font-weight="bold" filter="url(#glow)">VORTEX</text>
+  
+  <!-- Decorative lines -->
+  <line x1="50" y1="100" x2="150" y2="100" stroke="#ff0040" stroke-width="2" opacity="0.8"/>
+  <line x1="250" y1="100" x2="350" y2="100" stroke="#ff0040" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Corner brackets -->
+  <path d="M 30 30 L 30 40 L 40 40" fill="none" stroke="#00ff41" stroke-width="2"/>
+  <path d="M 370 30 L 370 40 L 360 40" fill="none" stroke="#00ff41" stroke-width="2"/>
+  <path d="M 30 120 L 30 110 L 40 110" fill="none" stroke="#00ff41" stroke-width="2"/>
+  <path d="M 370 120 L 370 110 L 360 110" fill="none" stroke="#00ff41" stroke-width="2"/>
+</svg>

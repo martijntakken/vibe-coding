@@ -17,6 +17,25 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.logo.vortex:hover {
+  filter: drop-shadow(0 0 2em #00ff41aa);
+}
+
+.ascii-art {
+  font-family: 'Courier New', Consolas, 'Liberation Mono', Monaco, 'Lucida Console', monospace;
+  font-size: 0.8rem;
+  color: #00ff41;
+  text-shadow: 0 0 10px #00ff41;
+  background: #0a0a0a;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #00ff41;
+  margin: 1rem auto;
+  max-width: fit-content;
+  overflow-x: auto;
+  line-height: 1;
+  white-space: pre;
+}
 
 @keyframes logo-spin {
   from {
