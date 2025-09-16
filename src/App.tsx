@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import wortellLogo from './assets/wortell-logo.svg'
 import './App.css'
 import Tetris from './Tetris'
 
@@ -10,14 +9,47 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href="https://wortell.nl" target="_blank">
+          <img src={wortellLogo} className="logo" alt="Wortell Enterprise Security logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <pre style={{ 
+        fontFamily: 'monospace', 
+        fontSize: '14px', 
+        lineHeight: '1.2', 
+        color: '#4CAF50',
+        textShadow: '0 0 5px #4CAF50',
+        background: '#0a0a0a',
+        padding: '20px',
+        borderRadius: '5px',
+        margin: '20px 0',
+        textAlign: 'center'
+      }}>
+{`
+██╗    ██╗ ██████╗ ██████╗ ████████╗███████╗██╗     ██╗     
+██║    ██║██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██║     ██║     
+██║ █╗ ██║██║   ██║██████╔╝   ██║   █████╗  ██║     ██║     
+██║███╗██║██║   ██║██╔══██╗   ██║   ██╔══╝  ██║     ██║     
+╚███╔███╔╝╚██████╔╝██║  ██║   ██║   ███████╗███████╗███████╗
+ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝╚══════╝
+
+████████████████████████████████████████████████████████████
+                                                            
+  ███████╗███╗   ██╗████████╗███████╗██████╗ ██████╗ ██████╗ 
+  ██╔════╝████╗  ██║╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██╔══██╗
+  █████╗  ██╔██╗ ██║   ██║   █████╗  ██████╔╝██████╔╝██████╔╝
+  ██╔══╝  ██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗██╔═══╝ ██╔══██╗
+  ███████╗██║ ╚████║   ██║   ███████╗██║  ██║██║     ██║  ██║
+  ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝
+                                                            
+  ██████╗███████╗ ██████╗██╗   ██╗██████╗ ██╗████████╗██╗   ██╗
+ ██╔════╝██╔════╝██╔════╝██║   ██║██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝
+ ██║     █████╗  ██║     ██║   ██║██████╔╝██║   ██║    ╚████╔╝ 
+ ██║     ██╔══╝  ██║     ██║   ██║██╔══██╗██║   ██║     ╚██╔╝  
+ ╚██████╗███████╗╚██████╗╚██████╔╝██║  ██║██║   ██║      ██║   
+  ╚═════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   
+`}
+      </pre>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -27,7 +59,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Click on the Wortell Enterprise Security logo to learn more
       </p>
       <Tetris />
     </>
