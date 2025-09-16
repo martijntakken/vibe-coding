@@ -1,0 +1,213 @@
+.tetris {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.tetris__panel {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.75rem;
+  width: min(100%, 720px);
+  border-radius: 20px;
+  background: rgba(23, 29, 46, 0.85);
+  box-shadow:
+    0 24px 48px rgba(12, 16, 32, 0.5),
+    0 0 0 1px rgba(120, 145, 255, 0.18);
+  color: #eff3ff;
+}
+
+.tetris__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.tetris__header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tetris__status {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.tetris__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.tetris__board {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 16px;
+  background: radial-gradient(circle at top, rgba(62, 76, 138, 0.5), rgba(19, 24, 45, 0.95));
+  box-shadow: inset 0 0 0 1px rgba(100, 130, 255, 0.25);
+}
+
+.tetris__row {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+}
+
+.tetris__cell {
+  width: min(100%, 24px);
+  aspect-ratio: 1;
+  background: rgba(12, 18, 32, 0.65);
+  border-radius: 5px;
+  border: 1px solid rgba(41, 55, 105, 0.6);
+  box-shadow: inset 0 0 0 1px rgba(4, 6, 15, 0.4);
+}
+
+.tetris__cell--filled {
+  background: var(--cell-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    inset 0 0 8px rgba(255, 255, 255, 0.35),
+    0 6px 12px rgba(9, 12, 25, 0.45);
+}
+
+.tetris__overlay {
+  position: absolute;
+  inset: 12px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  background: rgba(7, 10, 20, 0.85);
+  gap: 0.75rem;
+}
+
+.tetris__overlay p {
+  margin: 0;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.tetris__overlay button {
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ff7289, #ffad6a);
+  color: #05101f;
+  cursor: pointer;
+}
+
+.tetris__sidebar {
+  display: grid;
+  gap: 1rem;
+}
+
+.tetris__stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  background: rgba(18, 24, 44, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(94, 126, 240, 0.25);
+}
+
+.tetris__label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.tetris__next {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.tetris__preview {
+  display: grid;
+  gap: 4px;
+  padding: 0.75rem;
+  border-radius: 12px;
+  background: rgba(17, 22, 42, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(90, 120, 230, 0.25);
+}
+
+.tetris__preview-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.tetris__preview-cell {
+  width: min(100%, 18px);
+  aspect-ratio: 1;
+  border-radius: 4px;
+  background: rgba(12, 18, 30, 0.6);
+  border: 1px solid rgba(46, 60, 110, 0.4);
+}
+
+.tetris__preview-cell--filled {
+  background: var(--cell-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.tetris__controls {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.tetris__controls button {
+  border: none;
+  padding: 0.65rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6f80ff, #9a88ff);
+  color: #fff;
+  cursor: pointer;
+}
+
+.tetris__hint {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(16, 22, 38, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(90, 120, 230, 0.25);
+}
+
+.tetris__hint p {
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  opacity: 0.75;
+}
+
+.tetris__hint ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 720px) {
+  .tetris__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tetris__sidebar {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .tetris__controls {
+    grid-column: 1 / -1;
+  }
+}
